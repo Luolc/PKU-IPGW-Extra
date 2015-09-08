@@ -18,7 +18,10 @@
   ],
   "web_accessible_resources": [
 	"images/PKU-IPGW-Extra-32.png",
-	"images/PKU-IPGW-Extra-128.png"
+	"images/PKU-IPGW-Extra-128.png",
+	"fonts/caecilialtstd-bold-webfont.woff",
+	"fonts/caecilialtstd-italic-webfont.woff",
+	"fonts/caecilialtstd-roman-webfont.woff"
   ]
 }
 

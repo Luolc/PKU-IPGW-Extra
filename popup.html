@@ -8,34 +8,73 @@
 		
 		<link rel="stylesheet" href="css/buttons.css">
 		<style>
+			/* fonts */
+			@font-face { 
+				font-family: CaeciliaItalic; 
+				src: url('fonts/caecilialtstd-italic-webfont.woff'); 
+			} 
+						
 			body {
 				font: "宋体", "Times New Roman";
-				font-size: 10pt;
-				min-width: 280px;
+				font-size: 10px;
+				//min-width: 240px;
 			}
-			
-			.connect-button-group {
-				text-align:center;
-				margin:0 auto;
+			table {
+				border-spacing: 0;
 			}
+			p {
+				-webkit-margin-before: 0;
+				-webkit-margin-after: 0;
+			}
+			#main {
+				padding: 12px;
+				position: relative;
+			}
+						
+			/* title */
+			#title {
+				margin: 4px 0 12px 0;
+				font-family: CaeciliaItalic, Times, serif;
+				font-size: 15px;
+				text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+				width: 100%;
+			}
+
+			/* button */
 			.connect-button-group button {
-				font-size: 10pt;
+				font-size: 10px;
+				min-width: 100px;
+			}
+			#btn-connect-free {
+				margin: 0 4px 4px 0;
+			}
+			#btn-connect-fee {
+				margin: 0 0 4px 4px;
+			}
+			#btn-disconnect-this {
+				margin: 4px 4px 0 0;
+			}
+			#btn-disconnect-all {
+				margin: 4px 0 0 4px;
 			}
 		</style>
 		
 	</head>
 	<body>
-		<div class="connect-button-group">
-			<table class="connect-button-group">
-				<tr>
-					<td><button id="btn-connect-free" class="button button-raised button-primary button-small">连接免费</button></td>
-					<td><button id="btn-connect-fee" class="button button-raised button-primary button-small">连接收费</button></td>
-				</tr>
-				<tr>
-					<td><button id="btn-disconnect-this" class="button button-raised button-primary button-small">断开当前</button></td>
-					<td><button id="btn-disconnect-all" class="button button-raised button-primary button-small">断开全部</button></td>
-				</tr>
-			</table>
+		<div id="main">
+			<p id="title">PKU IPGW Extra - V1.0.0</p>
+			<div class="connect-button-group">
+				<table>
+					<tr>
+						<td><button id="btn-connect-free" class="button button-raised button-tiny">连接免费</button></td>
+						<td><button id="btn-connect-fee" class="button button-raised button-tiny">连接收费</button></td>
+					</tr>
+					<tr>
+						<td><button id="btn-disconnect-this" class="button button-raised button-tiny">断开当前</button></td>
+						<td><button id="btn-disconnect-all" class="button button-raised button-tiny">断开全部</button></td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</body>
 </html>
