@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="cn">
+	<head>
+		<meta charset="utf-8">
+		<title>PKU IPGW Extra</title>
+		<script src="lib/jquery.js"></script>
+		<script src="popup.js"></script>		
+		
+		<link rel="stylesheet" href="css/buttons.css">
+		<style>
+			body {
+				font: "宋体", "Times New Roman";
+				font-size: 10pt;
+				min-width: 280px;
+			}
+			
+			.connect-button-group {
+				text-align:center;
+				margin:0 auto;
+			}
+			.connect-button-group button {
+				font-size: 10pt;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="connect-button-group">
+			<table class="connect-button-group">
+				<tr>
+					<td><button id="btn-connect-free" class="button button-raised button-primary button-small">连接免费</button></td>
+					<td><button id="btn-connect-fee" class="button button-raised button-primary button-small">连接收费</button></td>
+				</tr>
+				<tr>
+					<td><button id="btn-disconnect-this" class="button button-raised button-primary button-small">断开当前</button></td>
+					<td><button id="btn-disconnect-all" class="button button-raised button-primary button-small">断开全部</button></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
