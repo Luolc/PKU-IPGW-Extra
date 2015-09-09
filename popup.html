@@ -13,11 +13,16 @@
 				font-family: CaeciliaItalic; 
 				src: url('fonts/caecilialtstd-italic-webfont.woff'); 
 			} 
+			@font-face { 
+				font-family: CaeciliaBold; 
+				src: url('fonts/caecilialtstd-bold-webfont.woff'); 
+			}
 						
 			body {
-				font: "宋体", "Times New Roman";
+				font-family: 'Times New Roman', '宋体';
 				font-size: 10px;
-				//min-width: 240px;
+				margin: 0;
+				-webkit-user-select: none;
 			}
 			table {
 				border-spacing: 0;
@@ -26,22 +31,40 @@
 				-webkit-margin-before: 0;
 				-webkit-margin-after: 0;
 			}
+			
 			#main {
-				padding: 12px;
+				padding: 0 20px;
 				position: relative;
 			}
 						
-			/* title */
 			#title {
-				margin: 4px 0 12px 0;
+				margin: 12px 0 12px 0;
 				font-family: CaeciliaItalic, Times, serif;
 				font-size: 15px;
 				text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
 				width: 100%;
 			}
+			
+			/* IPGW-state */
+			#ipgw-state {
+				margin: 8px 0;
+				font-size: 12px;
+			}
+			.state-header {
+				margin: 2px 8px 2px 30px;
+			}
+			.lightrow {
+				background-color: #FFFFF8;
+			}
+			.darkrow {
+				background-color: #FFFFE0;
+			}
 
 			/* button */
-			.connect-button-group button {
+			#connect-button-group {
+				margin-bottom: 16px;
+			}
+			#connect-button-group button {
 				font-size: 10px;
 				min-width: 100px;
 			}
@@ -57,13 +80,61 @@
 			#btn-disconnect-all {
 				margin: 4px 0 0 4px;
 			}
+			
+			/* divider */
+			.divider h1 {
+				color: #8A9CA8;
+				display: inline-block;
+				font-size: 14px;
+				font-weight: normal;
+				left: 24px;
+				padding: 0 6px;
+				position: relative;
+				-webkit-margin-before: 0;
+				-webkit-margin-after: 0;
+			}
+			.divider h1:before, h1:after {
+				border-top: 1px solid #B6B6B6;
+				content: "";
+				position: absolute;
+				top: 47%;
+			}
+			.divider h1:before {
+				left: -24px;
+				width: 24px;
+			}
+			.divider h1:after {
+				left: 100%;
+				width: -webkit-calc(212px - 100% - 24px);
+			}
+			.divider hr {			
+				border: none;
+				border-top: 1px solid #B6B6B6;
+				margin: 0;
+			}
+			
+			#settings {
+				background-repeat: no-repeat;
+				background-image: url(images/settings.png);
+				background-position: 2px 50%;
+				background-size: 18px 19px;
+				line-height: 40px;
+				cursor: pointer;
+				font-size: 12px;
+				padding-left: 29px;
+			}
+			#settings:hover {
+				color: #B6B6B6;
+			}
 		</style>
 		
 	</head>
 	<body>
 		<div id="main">
-			<p id="title">PKU IPGW Extra - V1.0.0</p>
-			<div class="connect-button-group">
+			<div id="title">
+				<p>PKU IPGW Extra - V1.0.0</p>
+			</div>
+			<div id="connect-button-group">
 				<table>
 					<tr>
 						<td><button id="btn-connect-free" class="button button-raised button-tiny">连接免费</button></td>
@@ -75,6 +146,31 @@
 					</tr>
 				</table>
 			</div>
+			<div class="divider">
+				<h1>网关连接状态</h1>
+			</div>
+			<div id="ipgw-state">
+				<table width="100%">
+					<tr class="darkrow">
+						<td><p class="state-header">当前账户</p></td>
+						<td>1400012616</td>
+					</tr>
+					<tr class="lightrow">
+						<td><p class="state-header">连接状态</p></td>
+						<td>已连接到免费</td>
+					</tr>
+					<tr class="darkrow">
+						<td><p class="state-header">已用时长</p></td>
+						<td>13.146小时</td>
+					</tr>
+					<tr class="lightrow">
+						<td><p class="state-header">账户余额</p></td>
+						<td>20元</td>
+					</tr>
+				</table>
+			</div>
+			<div class="divider"><hr></div>
+			<div id="settings" message="options_title">选项</div>
 		</div>
 	</body>
 </html>
