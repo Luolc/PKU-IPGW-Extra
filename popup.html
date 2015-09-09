@@ -113,7 +113,8 @@
 				margin: 0;
 			}
 			
-			#settings {
+			#text-settings {
+				color: #909090;
 				background-repeat: no-repeat;
 				background-image: url(images/settings.png);
 				background-position: 2px 50%;
@@ -121,19 +122,49 @@
 				line-height: 40px;
 				cursor: pointer;
 				font-size: 12px;
-				padding-left: 29px;
+				padding-left: 31px;
 			}
-			#settings:hover {
+			#text-settings:hover {
 				color: #B6B6B6;
+			}
+			#settings {
+				margin: 0 0 12px 30px;
+				font-size: 12px;
+			}
+			#settings input {
+				max-width: 116px;
+				vertical-align:middle;
+			}
+			.settings-header {
+				margin-right: 4px;
+			}
+			#account {
+				margin-bottom: 1px;
+			}
+			#password {
+				margin: 1px 0 4px;
+			}
+			#checkbox-group {
+				margin-top: 8px;
+			}
+			#checkbox-group input[type="checkbox"] {
+				margin: 0 2px 0 0;
+			}
+			#cb-remember-group, #cb-auto-group {
+				display: inline;
+			}
+			#cb-remember-group {
+				margin-right: 12px;
+			}
+			#btn-save-settings {
+				margin: 12px 0 0 0;
 			}
 		</style>
 		
 	</head>
 	<body>
 		<div id="main">
-			<div id="title">
-				<p>PKU IPGW Extra - V1.0.0</p>
-			</div>
+			<div id="title"><p>PKU IPGW Extra - V1.0.0</p></div>
 			<div id="connect-button-group">
 				<table>
 					<tr>
@@ -146,9 +177,7 @@
 					</tr>
 				</table>
 			</div>
-			<div class="divider">
-				<h1>网关连接状态</h1>
-			</div>
+			<div class="divider"><h1>网关连接状态</h1></div>
 			<div id="ipgw-state">
 				<table width="100%">
 					<tr class="darkrow">
@@ -170,7 +199,28 @@
 				</table>
 			</div>
 			<div class="divider"><hr></div>
-			<div id="settings" message="options_title">选项</div>
+			<div id="text-settings" message="options_title">账户设置</div>
+			<div id="settings">
+				<table>
+					<tr>
+						<td><label for="account" class="settings-header">账户</label></td>
+						<td><input type="text" name="account" id="account" tabindex=1/></td>
+					</tr>
+					<tr>
+						<td><label for="password" class="settings-header">密码</label></td>
+						<td><input type="password" name="password" id="password" tabindex=2/></td>
+					</tr>
+				</table>
+				<div id="checkbox-group">
+					<div id="cb-remember-group">
+						<input type="checkbox" name="cb-remember" id="cb-remember" tabindex=3 checked="checked"/><label for="cb-remember">记住账号</label>	
+					</div>
+					<div id="cb-auto-group">
+						<input type="checkbox" name="cb-auto" id="cb-auto" tabindex=4 checked="checked"/><label for="cb-auto">自动连接</label>	
+					</div>
+				</div>
+				<div style="text-align:right"><button id="btn-save-settings" class="button button-raised button-tiny" tabindex=5>保存</button></div>
+			</div>
 		</div>
 	</body>
 </html>
