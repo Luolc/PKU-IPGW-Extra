@@ -4,7 +4,8 @@
   "version":"1.0.0",
   "description":"Auto PKU IPGW connect helper",
   "icons":{
-	"32":"images/PKU-IPGW-Extra-32.png",
+	"16":"images/PKU-IPGW-Extra-16.png",
+	"48":"images/PKU-IPGW-Extra-48.png",
 	"128":"images/PKU-IPGW-Extra-128.png"
   },
   "browser_action": {
